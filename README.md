@@ -1,4 +1,5 @@
-# Puppeteer project from MIT Bank-end
+# Puppeteer 
+>A project based on an original exercise/assignment from MIT Back-end module MIT xPRO Professional Certificate in Coding: Full Stack Development with MERN June 2021
 
 ## How to call puppeteer-cmd.js:
 Server must be up
