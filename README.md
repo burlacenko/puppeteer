@@ -90,10 +90,13 @@ This function returns:
 
 ### Successful tests with my bank app running on the web: 
 node puppeteer-cmd2.js url=http://www.easymoneybank.online/#
+
 node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/alldata
+
 node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/deposit
 
 ## Screenshot
 ![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105306.jpg)
 ![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105440.jpg)
 ![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105504.jpg)
+
