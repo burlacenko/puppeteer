@@ -1,7 +1,8 @@
 # Puppeteer 
 >A project based on an original exercise/assignment from MIT Back-end module MIT xPRO Professional Certificate in Coding: Full Stack Development with MERN June 2021
 
-## How to call puppeteer-cmd.js:
+## Usage from the original exercise/assignment:
+How to call puppeteer-add.js and puppeteer-delete.js:
 A local MongoDB must be on
 Server must be up
 Client (the target page) must be up
@@ -53,7 +54,7 @@ I SOLVED the warnings by redefining scope of the "browser" variable by creating 
 
 ## Catch arguments from the command line
 My second improvement was to catch arguments from the command line 
-so that we coudl use it as parameter to determine the button or class to be "clicked"
+so that we could use it as parameter to determine the button or class to be "clicked"
 https://stackoverflow.com/questions/4351521/how-do-i-pass-command-line-arguments-to-a-node-js-program
 var args = process.argv.slice(2);
 
@@ -71,17 +72,28 @@ process.argv.forEach(function (val, index, array) {
   3: two=three
   4: four
 
-I created the function findParam(argName) which searches for a desired argument extracted from the command line
- this function returns:
- a string if param was found
- null if param was found by is empty
- undefined type if param was not found 
+## Rewrote the wrote async imediate call so that first we`ll evaluate the arguments provided in the command line
+Async construction: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#description
 
-EVOLVED findParam to take an "ignoreCase" option
-EVOLVED to findParams.js
+## Other improvements:
+- [x] created function findParam(argName) which searches for a desired argument extracted from the command line
+- [x] findParam to take an "ignoreCase" option
+- [x] findParam became a module exported at findParams.js
+- [x] created `puppeteer-cmd.js` to use the args provided in the command line 
+- [x] extended functionality with `puppeteer-cmd2.js` to enable simply opening any url and take a shot. We may use it with any URL that responds (locally or in the web)
 
-CHANGED the way we wrote the async
- async construction: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#description
+### About the function findParam(argName)
+This function returns:
+- a string if param was found
+- null if param was found by is empty
+- undefined type if param was not found 
 
-EVOLVED to use the args provided in the command line
+### Successful tests with my bank app running on the web: 
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/#
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/alldata
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/deposit
 
+## Screenshot
+![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105306.jpg)
+![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105440.jpg)
+![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105504.jpg)
