@@ -83,19 +83,41 @@ Async construction: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 - [x] extended functionality with `puppeteer-cmd2.js` to enable simply opening any url and take a shot. We may use it with any URL that responds (locally or in the web)
 
 ### About the function findParam(argName)
-This function returns:
+Current admitted params at `puppeteer-cmd2.js`:
+
+For a `click action` with examples:
+- url=www.localhost/3000
+- action=click
+- targettype=class
+- target=create-user
+
+For a `simple url` & screenshot:
+- url=http://www.easymoneybank.online/#
+
+`Help`:
+Admitted actions for now is "click"
+Admitted targettypes are "class" and "id"
+target should be the name of the class or id that should receive the click
+
+
+#### Examples:
+node puppeteer-cmd.js url=www.localhost/3000 action=click targettype= TARGET=create-user
+node puppeteer-cmd.js url=www.localhost/3000 action=click targettype= TARGET=delete-user
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/#
+
+
+#### `findParam(argName)`, `puppeteer-cmd.js` and `puppeteer-cmd2.js` return:
 - a string if param was found
 - null if param was found by is empty
 - undefined type if param was not found 
 
 ### Successful tests with my bank app running on the web: 
-node puppeteer-cmd2.js url=http://www.easymoneybank.online/#
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/# </br>
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/alldata </br>
+node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/deposit </br>
 
-node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/alldata
-
-node puppeteer-cmd2.js url=http://www.easymoneybank.online/#/deposit
-
-## Screenshot
+## Screenshots
+![screenshots from littetiers](screenshot2022-04-05-043314.jpg)
 ![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105306.jpg)
 ![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105440.jpg)
 ![screenshots from EasyMoneyBank Online](screenshot2022-04-05-105504.jpg)
