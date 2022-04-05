@@ -2,6 +2,7 @@
 >A project based on an original exercise/assignment from MIT Back-end module MIT xPRO Professional Certificate in Coding: Full Stack Development with MERN June 2021
 
 ## How to call puppeteer-cmd.js:
+A local MongoDB must be on
 Server must be up
 Client (the target page) must be up
 Examples:
