@@ -39,7 +39,7 @@ const testCreateUserButton = async () => {
 
     // finallyCode - Code block to be executed regardless of the try result
     // shutdown
-    browser.close();  
+    await browser.close();  
 };
 
 module.exports = testCreateUserButton;
