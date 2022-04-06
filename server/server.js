@@ -5,7 +5,7 @@ const connectDb = require('./src/database');
 const faker = require('faker');
 
 const User = require('./src/models/user.model');
-const testCreateUserButton = require('./src/puppeteer');
+const testCreateUserButton = require('./src/puppeteer-test.js');
 // configure express to use cors()
 // ------------------------------------------------------------------
 app.use(cors());
